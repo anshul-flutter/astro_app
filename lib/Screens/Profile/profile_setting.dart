@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
+import '../../authentication/forget_password.dart';
+import 'aboutus_page.dart';
+import 'help_and_support.dart';
+import 'notification_page.dart';
 // import 'view_profile_screen.dart';
 // import 'my_courses_screen.dart';
 // import 'change_password_screen.dart';
 // import 'notifications_screen.dart';
 // import 'about_screen.dart';
-// import 'help_support_screen.dart';
 
 class ProfileSettingsScreen extends StatelessWidget {
   const ProfileSettingsScreen({Key? key}) : super(key: key);
@@ -238,11 +242,10 @@ class ProfileSettingsScreen extends StatelessWidget {
                       Icons.lock_outline,
                       'Change Password',
                       () {
-                        // Uncomment when ChangePasswordScreen is imported
-                        // Navigator.push(
-                        //   context,
-                        //   MaterialPageRoute(builder: (context) => const ChangePasswordScreen()),
-                        // );
+                        Navigator.push(
+                           context,
+                           MaterialPageRoute(builder: (context) => const ForgotPasswordScreen()),
+                         );
                       },
                       const Color(0xFFD84315),
                     ),
@@ -251,20 +254,19 @@ class ProfileSettingsScreen extends StatelessWidget {
                       Icons.notifications_outlined,
                       'Notifications',
                       () {
-                        // Uncomment when NotificationsScreen is imported
-                        // Navigator.push(
-                        //   context,
-                        //   MaterialPageRoute(builder: (context) => const NotificationsScreen()),
-                        // );
+                         Navigator.push(
+                           context,
+                           MaterialPageRoute(builder: (context) => const NotificationsPage()),
+                         );
                       },
                       const Color(0xFFFF5722),
                     ),
                     _buildMenuItem(context, Icons.info_outline, 'About', () {
                       // Uncomment when AboutScreen is imported
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(builder: (context) => const AboutScreen()),
-                      // );
+                       Navigator.push(
+                         context,
+                         MaterialPageRoute(builder: (context) => const AboutUsPage()),
+                       );
                     }, const Color(0xFFD84315)),
                     _buildMenuItem(
                       context,
@@ -272,10 +274,10 @@ class ProfileSettingsScreen extends StatelessWidget {
                       'Help & Support',
                       () {
                         // Uncomment when HelpSupportScreen is imported
-                        // Navigator.push(
-                        //   context,
-                        //   MaterialPageRoute(builder: (context) => const HelpSupportScreen()),
-                        // );
+                         Navigator.push(
+                           context,
+                          MaterialPageRoute(builder: (context) => const HelpSupportPage()),
+                         );
                       },
                       const Color(0xFFD84315),
                     ),
