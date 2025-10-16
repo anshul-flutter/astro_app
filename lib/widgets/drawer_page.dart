@@ -41,7 +41,9 @@ class MenuPage extends StatelessWidget {
                             Row(
                               children: [
                                 TextButton.icon(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.pushNamed(context, '/login');
+                                  },
                                   icon: const Icon(Icons.login, color: Colors.white),
                                   label: const Text(
                                     'Login / Register',
@@ -51,7 +53,9 @@ class MenuPage extends StatelessWidget {
                                 IconButton(
                                   icon: const Icon(Icons.notifications_outlined,
                                       color: Colors.white),
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.pushNamed(context, '/notifications');
+                                  },
                                 ),
                               ],
                             ),

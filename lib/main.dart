@@ -1,6 +1,8 @@
 import 'package:astro_app/authentication/signup_screen.dart';
 import 'package:flutter/material.dart';
+import 'Screens/Profile/notification_page.dart';
 import 'Screens/home_screen.dart';
+import 'authentication/login_screen.dart';
 import 'authentication/signin_screen.dart';
 
 void main() {
@@ -25,6 +27,8 @@ class MyApp extends StatelessWidget {
         '/signin': (context) => const SignInScreen(),
         '/register': (context) => const RegisterScreen(),
         '/home': (context) => const VastuHomeScreen(),
+        '/login': (context) => LoginScreen(),
+        '/notifications': (context) => NotificationsPage(),
       },
     );
   }
