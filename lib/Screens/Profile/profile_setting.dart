@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../../authentication/forget_password.dart';
-import 'aboutus_page.dart';
 import 'help_and_support.dart';
-import 'notification_page.dart';
 // import 'view_profile_screen.dart';
 // import 'my_courses_screen.dart';
 // import 'change_password_screen.dart';
@@ -254,19 +252,19 @@ class ProfileSettingsScreen extends StatelessWidget {
                       Icons.notifications_outlined,
                       'Notifications',
                       () {
-                         Navigator.push(
-                           context,
-                           MaterialPageRoute(builder: (context) => const NotificationsPage()),
-                         );
+                        // Navigator.push(
+                           //context,
+                         //  MaterialPageRoute(builder: (context) => const NotificationsPage()),
+                        // );
                       },
                       const Color(0xFFFF5722),
                     ),
                     _buildMenuItem(context, Icons.info_outline, 'About', () {
                       // Uncomment when AboutScreen is imported
-                       Navigator.push(
-                         context,
-                         MaterialPageRoute(builder: (context) => const AboutUsPage()),
-                       );
+                       //Navigator.push(
+                        // context,
+                        // MaterialPageRoute(builder: (context) => const AboutUsPage()),
+                      // );
                     }, const Color(0xFFD84315)),
                     _buildMenuItem(
                       context,

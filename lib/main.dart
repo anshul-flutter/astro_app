@@ -1,21 +1,9 @@
+import 'package:astro_app/authentication/signup_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-
 import 'Screens/home_screen.dart';
-import 'authentication/login_screen.dart';
 import 'authentication/signin_screen.dart';
-import 'authentication/signup_screen.dart';
-import 'authentication/start_screen.dart';
 
-
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-
-  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-    statusBarColor: Colors.transparent,
-    statusBarIconBrightness: Brightness.dark,
-  ));
-
+void main() {
   runApp(const MyApp());
 }
 
@@ -25,16 +13,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Astrology App',
+      title: 'Vastu Abhishek',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.deepOrange,
-        fontFamily: 'SF Pro',
+        useMaterial3: true,
+        fontFamily: 'Roboto',
       ),
-      initialRoute: '/',
+      initialRoute: '/home',
       routes: {
-        '/home': (context) => const HomeScreen(),
+        '/signin': (context) => const SignInScreen(),
         '/register': (context) => const RegisterScreen(),
+        '/home': (context) => const VastuHomeScreen(),
       },
     );
   }

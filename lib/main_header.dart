@@ -1,30 +1,28 @@
+import 'package:astro_app/widgets/drawer_page.dart';
 import 'package:flutter/material.dart';
 
 class MainHeader extends StatelessWidget implements PreferredSizeWidget {
   final String title;
-  final VoidCallback? onMenuPressed;
   final VoidCallback? onActionPressed;
 
   const MainHeader({
     super.key,
     required this.title,
-    this.onMenuPressed,
     this.onActionPressed,
   });
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      leading: Builder(
-        builder: (BuildContext context) {
-          return IconButton(
-            icon: const Icon(Icons.menu, color: Colors.white),
-            onPressed: onMenuPressed ?? () {
-              Scaffold.of(context).openDrawer();
-            },
-            tooltip: MaterialLocalizations.of(context).openAppDrawerTooltip,
+      leading: IconButton(
+        icon: const Icon(Icons.menu, color: Colors.white),
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const MenuPage()),
           );
         },
+        tooltip: 'Menu',
       ),
       title: Text(
         title,
